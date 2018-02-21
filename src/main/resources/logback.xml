@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration>
+	<property name="log.base" value="./log" />
+	
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>
+				${log.base}/stdout.log.%d{yyyy-MM-dd-HH}
+			</FileNamePattern>
+		</rollingPolicy>
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>[%level] %date [%thread] - %msg %logger{0}-%M-%L%n</pattern>
+		</layout>
+	</appender>
+	<logger name="com.creditease.ns.miner">
+		<level value="DEBUG" />
+		<appender-ref ref="STDOUT" />
+	</logger>
+	
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+	</root>
+</configuration>

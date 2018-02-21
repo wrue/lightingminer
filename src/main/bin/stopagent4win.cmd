@@ -1,0 +1,1 @@
+wmic process where "name='java.exe' and commandline like '%%light%%'" delete

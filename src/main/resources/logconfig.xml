@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+	<tracker name="crawl.java" storePath="${collector.logDir}%3">
+	</tracker>
+	<tracker name="crawl.csharp" storePath="${collector.logDir}%5">
+	</tracker>
+</config>
